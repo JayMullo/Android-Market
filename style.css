@@ -405,7 +405,7 @@ header {
   left: 0;
   width: 100%;
   height: 75px; /* Full banner height */
-  background: url('banner.jpg') center center/cover no-repeat;
+  background: url('banner.jpg') right center/cover no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: flex-end; /* Keep nav at the bottom of banner */
