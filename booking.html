@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking - Android Market</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Android Market</h1>
+        <nav>
+            <b>
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="booking.html">Booking</a>
+            </b>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Book an Appointment</h2>
+            <p>Schedule your repair appointment online. Select a service and choose a convenient time.</p>
+            <form class="booking-form">
+                <label for="service">Select Service:</label>
+                <select id="service" name="service" required>
+                    <option value="">-- Select a Service --</option>
+                    <option value="screen">Screen Replacement</option>
+                    <option value="battery">Battery Replacement</option>
+                    <option value="software">Software Troubleshooting</option>
+                    <option value="charging">Charging Port Repair</option>
+                    <option value="water">Water Damage Repair</option>
+                    <option value="data">Data Recovery</option>
+                </select>
+
+                <label for="date">Select Date:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="time">Select Time:</label>
+                <input type="time" id="time" name="time" required>
+
+                <button type="submit">Book Now</button>
+            </form>
+        </section>
+
+        <section>
+            <div class="social-media">
+                <a href="https://www.facebook.com/androidmarketcentre" target="_blank">
+                    <i class="fab fa-facebook-square"></i>
+                </a>
+                <a href="https://www.instagram.com/android_market__" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://twitter.com/Androidmarketja" target="_blank">
+                    <i class="fab fa-twitter-square"></i>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Android Market. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+<script>
+  const header = document.querySelector('header');
+  let lastScroll = 0;
+
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+    if (currentScroll > lastScroll && currentScroll > 100) {
+      header.classList.add('shrink'); // Shrink on scroll down
+    } else {
+      header.classList.remove('shrink'); // Expand on scroll up
+    }
+    lastScroll = currentScroll;
+  });
+</script>
+</body>
+</html>
