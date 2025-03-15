@@ -3,8 +3,8 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #000000; 
-  color: #333;
+  background-color: #000000; /* Set background to black */
+  color: #fff; /* Changed all text to white */
   line-height: 1.6;
 }
 
@@ -75,7 +75,7 @@ nav a:hover {
   text-align: center;
   padding: 100px 20px;
   background: linear-gradient(135deg, rgba(13, 192, 106, 0.1), rgba(3, 148, 85, 0.15)), url('your-hero-image.jpg') center/cover no-repeat;
-  color: #055e35;
+  color: white; /* Changed text color to white */
   border-radius: 12px;
   margin-bottom: 40px;
 }
@@ -93,11 +93,12 @@ nav a:hover {
 /* Main Content Sections */
 main {
   padding: 50px 20px;
+  background-color: #055e35; /* Set background to same green as footer */
 }
 
 section {
   margin-bottom: 50px;
-  background: white;
+  background: rgba(5, 94, 53, 0.8); /* Same green color as footer with slight transparency */
   padding: 35px;
   border-radius: 12px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
@@ -112,7 +113,7 @@ section h2 {
 
 /* Testimonials */
 .testimonials blockquote {
-  background-color: #e8f8ed;
+  background-color: rgba(0, 0, 0, 0.8); /* Black background with transparency */
   padding: 25px;
   border-left: 6px solid #1db954;
   margin-bottom: 25px;
@@ -174,6 +175,70 @@ footer {
   background: linear-gradient(135deg, #168f3e, #0e6b2d);
 }
 
+/* Collage Gallery */
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* tighter collage effect */
+  gap: 10px; /* smaller gaps for tighter layout */
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Individual Gallery Items */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, z-index 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+/* Image */
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: brightness(95%);
+  border-radius: 12px;
+}
+
+/* Pop-out effect on hover */
+.gallery-item:hover {
+  transform: scale(1.5); /* makes it pop larger */
+  z-index: 99; /* brings to front */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3); /* deep shadow to "float" */
+}
+
+/* Optional image enhancements on hover */
+.gallery-item:hover img {
+  filter: brightness(105%) saturate(120%);
+  transform: scale(1.05); /* subtle inner zoom to add depth */
+}
+
+/* Optional caption revealed on hover */
+.gallery-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  font-size: 0.9em;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 0 0 12px 12px;
+}
+
+/* Show caption when hovering */
+gallery-item:hover .gallery-caption {
+  opacity: 1;
+}
 
 /* See More / See Less link styling */
 .see-more-link {
@@ -193,13 +258,15 @@ footer {
 .description {
   margin-top: 10px;
   font-size: 0.95em;
-  color: #333;
+  color: #fff; /* Set description text to white */
 }
+
 .banner-image {
-  width: 100%;            /* Makes the image span the full width of the container */
-  height: auto;           /* Ensures the aspect ratio is preserved */
-  display: block;         /* Removes any extra space below the image */
+  width: 100%; /* Makes the image span the full width of the container */
+  height: auto; /* Ensures the aspect ratio is preserved */
+  display: block; /* Removes any extra space below the image */
 }
+
 .social-media {
   display: flex;
   gap: 20px; /* Space between icons */
@@ -209,7 +276,7 @@ footer {
 
 .social-media a {
   font-size: 30px; /* Size of the icons */
-  color: #333; /* Icon color */
+  color: #fff; /* Changed icon color to white */
   text-decoration: none; /* Remove underline */
   transition: color 0.3s ease;
 }
@@ -227,9 +294,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f9f9f9;
+  background-color: #000000; /* Set background to black */
 }
-
 
 /* --- Booking Form Styling --- */
 .booking-form {
@@ -247,7 +313,7 @@ body {
 /* Labels */
 .booking-form label {
   font-weight: bold;
-  color: #007bff;
+  color: #fff; /* White text for labels */
   font-size: 1.1em;
 }
 
@@ -308,7 +374,7 @@ body {
 
 .social-media a {
   font-size: 2.5em;
-  color: #007bff;
+  color: #fff; /* White text for icons */
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
@@ -319,7 +385,7 @@ body {
 
 /* --- Optional: Background for Main --- */
 main {
-  background: linear-gradient(135deg, rgba(0, 123, 255, 0.05), rgba(0, 86, 179, 0.05));
+  background: #000000; /* Set background to same green as footer */
   padding: 60px 20px;
 }
 
@@ -413,12 +479,5 @@ main {
   }
   header h1 {
     font-size: 2em;
-  }
-  nav a {
-    padding: 8px 12px;
-    font-size: 0.95em;
-  }
-  main {
-    margin-top: 200px;
   }
 }
