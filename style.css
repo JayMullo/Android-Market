@@ -230,24 +230,7 @@ body {
   background-color: #f9f9f9;
 }
 
-/* Header Section */
-header {
-  position: relative;
-  height: 150px; /* Adjust this as needed */
-  background: url('https://JayMullo.github.io/Android Market/images/banner.jpg') no-repeat center center;
-  background-size: cover;
-  color: Green;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
 
-header h1 {
-  font-size: 4em;
-  margin: 0;
-}
 /* --- Booking Form Styling --- */
 .booking-form {
   display: grid;
@@ -356,7 +339,7 @@ header {
   left: 0;
   width: 100%;
   height: 75px; /* Full banner height */
-  background: url('https://JayMullo.github.io/Android Market/images/banner.jpg') center center/cover no-repeat;
+  background: url('https://github.com/JayMullo/Android-Market/blob/main/banner.jpg') center center/cover no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: flex-end; /* Keep nav at the bottom of banner */
