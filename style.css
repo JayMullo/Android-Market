@@ -319,6 +319,7 @@ body {
 
 /* Select & Input Fields */
 .booking-form select,
+.booking-form input[type="service"],
 .booking-form input[type="date"],
 .booking-form input[type="time"] {
   padding: 15px;
@@ -409,7 +410,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: flex-end; /* Keep nav at the bottom of banner */
-  align-items: justify;
+  align-items: center;
   padding-bottom: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   z-index: 1000;
@@ -445,7 +446,7 @@ nav {
   display: flex;
   gap: 20px;
   justify-content: center;
-  align-items: justify;
+  align-items: center;
   transition: padding 0.3s ease;
 }
 
