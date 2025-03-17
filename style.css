@@ -44,7 +44,7 @@ header {
   background: linear-gradient(135deg, #0f9d58, #34a853); /* Android Green */
   color: white;
   padding: 60px 0;
-  text-align: justify;
+  text-align: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -405,10 +405,10 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  height: 75px; /* Full banner height */
+  height: 150px; /* Full banner height */
   background: url('banner.jpg') center center/cover no-repeat;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: flex-end; /* Keep nav at the bottom of banner */
   align-items: center;
   padding-bottom: 20px;
@@ -420,7 +420,7 @@ header {
 
 /* Header when Shrunk */
 header.shrink {
-  height: 10px; /* Only navbar height */
+  height: 100px; /* Only navbar height */
   padding-bottom: 0;
   background: rgba(0, 0, 0, 0.85); /* Solid color or dark overlay when shrunk */
   backdrop-filter: blur(8px); /* Optional: modern blur effect */
@@ -428,9 +428,12 @@ header.shrink {
 
 /* Title inside Header */
 header h1 {
-  color: white;
+  color: lime;
+.gradient-text {
+  background: linear-gradient(to right, #a8e063, #56ab2f); /* Light to dark green */
+}
   margin: 0;
-  font-size: 3em;
+  font-size: 5em;
   transition: opacity 0.3s ease, font-size 0.3s ease;
 }
 
@@ -467,7 +470,7 @@ nav a:hover {
 
 /* Main content adjustment so it doesn't hide under header */
 main {
-  margin-top: 260px; /* Adjust to match header height */
+  margin-top: 150px; /* Adjust to match header height */
 }
 
 /* Optional: Make it responsive */
@@ -493,7 +496,7 @@ main {
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  color: #333;
+  color: #ffffff;
   background-color: #f9f9f9;
   padding: 0;
   margin: 0;
@@ -571,26 +574,73 @@ footer {
 }
 
 /* --- Responsive Media Query for Mobile --- */
+/* === Mobile Adaptation: Keeps Desktop Layout but Scales for Mobile === */
 @media (max-width: 768px) {
-  header {
-    padding: 10px;
+
+  /* Ensures the entire page fits the mobile screen */
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
   }
 
-  header nav a {
-    display: block;
-    margin: 5px 0;
+  /* Make sure main container doesn't overflow */
+  .container, .content, .main, main {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 0 10px;
   }
 
-  .product-card {
-    padding: 10px;
+  /* Keep navigation horizontal and scale down */
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    flex-wrap: nowrap; /* Prevent vertical stacking */
   }
 
-  .product-image {
-    height: 150px;
+  nav a {
+    font-size: 0.9em; /* Slightly smaller text */
+    padding: 5px 10px; /* Smaller padding */
+    white-space: nowrap; /* Prevent text from wrapping */
   }
 
-  .btn-buy {
-    padding: 8px 10px;
-    font-size: 14px;
+  /* Resize images proportionally */
+  img {
+    max-width: 100%;
+    height: auto;
   }
+
+  /* Scale headings and paragraph text slightly for mobile */
+  h1 {
+    font-size: 1.8em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  h3 {
+    font-size: 1.2em;
+  }
+
+  p, li, a {
+    font-size: 1em;
+  }
+
+  /* Optional: Ensure buttons don't overflow */
+  button, .btn {
+    max-width: 100%;
+    padding: 10px 15px;
+    font-size: 1em;
+  }
+
+  /* Optional: Footer adjustment */
+  footer {
+    padding: 10px 0;
+    text-align: center;
+  }
+
 }
