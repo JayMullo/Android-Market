@@ -428,12 +428,9 @@ header.shrink {
 
 /* Title inside Header */
 header h1 {
-  color: lime;
-.gradient-text {
-  background: linear-gradient(to right, #a8e063, #56ab2f); /* Light to dark green */
-}
+  color: green;
   margin: 0;
-  font-size: 5em;
+  font-size: 3.5em;
   transition: opacity 0.3s ease, font-size 0.3s ease;
 }
 
@@ -479,7 +476,7 @@ main {
     height: 180px;
   }
   header.shrink {
-    height: 60px;
+    height: 70px;
   }
   header h1 {
     font-size: 2em;
@@ -505,7 +502,7 @@ body {
 /* --- Header and Navigation --- */
 header {
   background-color: #333;
-  color: white;
+  color: green;
   padding: 15px;
   text-align: center;
 }
@@ -572,75 +569,11 @@ footer {
   padding: 15px;
   text-align: center;
 }
-
-/* --- Responsive Media Query for Mobile --- */
-/* === Mobile Adaptation: Keeps Desktop Layout but Scales for Mobile === */
-@media (max-width: 768px) {
-
-  /* Ensures the entire page fits the mobile screen */
-  body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-  }
-
-  /* Make sure main container doesn't overflow */
-  .container, .content, .main, main {
+.map-container {
     width: 100%;
     max-width: 100%;
-    box-sizing: border-box;
-    padding: 0 10px;
-  }
-
-  /* Keep navigation horizontal and scale down */
-  nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 10px 0;
-    flex-wrap: nowrap; /* Prevent vertical stacking */
-  }
-
-  nav a {
-    font-size: 0.9em; /* Slightly smaller text */
-    padding: 5px 10px; /* Smaller padding */
-    white-space: nowrap; /* Prevent text from wrapping */
-  }
-
-  /* Resize images proportionally */
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  /* Scale headings and paragraph text slightly for mobile */
-  h1 {
-    font-size: 1.8em;
-  }
-
-  h2 {
-    font-size: 1.5em;
-  }
-
-  h3 {
-    font-size: 1.2em;
-  }
-
-  p, li, a {
-    font-size: 1em;
-  }
-
-  /* Optional: Ensure buttons don't overflow */
-  button, .btn {
-    max-width: 100%;
-    padding: 10px 15px;
-    font-size: 1em;
-  }
-
-  /* Optional: Footer adjustment */
-  footer {
-    padding: 10px 0;
-    text-align: center;
-  }
-
+    margin: 10px auto;
+    border-radius: 10px;
+    overflow: hidden;
 }
+
